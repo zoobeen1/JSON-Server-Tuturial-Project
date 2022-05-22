@@ -1,24 +1,26 @@
 {
-  "name": "goit-js-hw-11",
+  "name": "json-server-tutorial",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://zoobeen1.github.io/goit-js-hw-11",
+  "homepage": "https://zoobeen1.github.io/json-server-tutorial",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-11/"
+    "build": "parcel build src/*.html --public-url /json-server-tutorial/",
+    "server": "json-server --watch db.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zoobeen1/goit-js-hw-11.git"
+    "url": "git+https://github.com/zoobeen1/json-server-tutorial.git"
   },
   "keywords": [],
   "author": "Zubin Wladyslaw <zoobeen1@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zoobeen1/goit-js-hw-11/issues"
+    "url": "https://github.com/zoobeen1/json-server-tutorial/issues"
   },
   "devDependencies": {
+    "json-server": "^0.17.0",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-plugin-nuke-dist": "^1.0.1",
