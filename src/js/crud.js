@@ -1,43 +1,49 @@
 const BASE_URL = 'http://localhost:3000';
 //create
-function addBook(book) {
+async function addBook(book) {
   const options = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(book),
   };
-  return fetch(`${BASE_URL}/books`, options).then(res => res.json());
+  const res = await fetch(`${BASE_URL}/books`, options);
+  return await res.json();
 }
 //read
-function getBooks() {
-  return fetch(`${BASE_URL}/books`).then(resp => resp.json());
+async function getBooks() {
+  const resp = await fetch(`${BASE_URL}/books`);
+  return await resp.json();
 }
-function getBook(bookId) {
-  return fetch(`${BASE_URL}/books/${bookId}`).then(resp => resp.json());
+async function getBook(bookId) {
+  const resp = await fetch(`${BASE_URL}/books/${bookId}`);
+  return await resp.json();
 }
 //update
-function patchBook(bookId, params) {
+async function patchBook(bookId, params) {
   const options = {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(params),
   };
-  return fetch(`${BASE_URL}/books/${bookId}`, options).then(res => res.json());
+  const res = await fetch(`${BASE_URL}/books/${bookId}`, options);
+  return await res.json();
 }
-function putBook(bookId, params) {
+async function putBook(bookId, params) {
   const options = {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(params),
   };
-  return fetch(`${BASE_URL}/books/${bookId}`, options).then(res => res.json());
+  const res = await fetch(`${BASE_URL}/books/${bookId}`, options);
+  return await res.json();
 }
 //delete
-function deleteBook(bookId) {
+async function deleteBook(bookId) {
   const url = `${BASE_URL}/books/${bookId}`;
   const options = {
     method: 'DELETE',
   };
-  return fetch(url, options).then(res => res.json());
+  const res = await fetch(url, options);
+  return await res.json();
 }
 export default { addBook, getBook, getBooks, patchBook, putBook, deleteBook };

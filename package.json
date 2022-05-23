@@ -2,7 +2,7 @@
   "name": "json-server-tutorial",
   "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "/js/script.js",
   "homepage": "https://zoobeen1.github.io/json-server-tutorial",
   "scripts": {
     "dev": "parcel src/*.html",
